@@ -6,6 +6,17 @@ body {background-color:beige}
     height: 100px;
     background-color: brown;
     border: 2px solid black;
-    position: relative;
+    position: absolute;
+}
+
+
+
+.square1 {
+    width: 100px;
+    height: 100px;
+    top: 200;
+    background-color: brown;
+    border: 2px solid black;
+    position: absolute;
 }
 

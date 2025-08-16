@@ -18,24 +18,41 @@ function changePos(event) {
         let invrectY = (invrect.top + invrect.bottom) /2; 
         let temprectX = (temprect.left + temprect.right) / 2;
         let temprectY = (temprect.top + temprect.bottom) / 2;
-        let distance = invrectY - temprectY
+        let distance = invrectY - temprectY;
+        let distanceX = invrectX - temprectX;
         
-        if (invrectX == temprectX && distance == 50 || distance == -50){
+        if (invrectX == temprectX && (distance == 50 || distance == -50)){
         
-        
-        event.target.style.position = 'absolute'
-        event.target.style.backgroundColor = 'pink'
-        event.target.style.left = `${invrect.left}px`;
-        event.target.style.top = `${invrect.top}px`;
-        
-        invbutton.style.position = 'absolute';
-        invbutton.style.left = `${temprect.left}px`;
-        invbutton.style.top = `${temprect.top}px`;
 
-        invrect = temprect
-        }
+            
+        
+            event.target.style.position = 'absolute'
+            event.target.style.backgroundColor = 'pink'
+            event.target.style.left = `${invrect.left}px`;
+            event.target.style.top = `${invrect.top}px`;
+            
+            invbutton.style.position = 'absolute';
+            invbutton.style.left = `${temprect.left}px`;
+            invbutton.style.top = `${temprect.top}px`;
+            
+            invrect = temprect}
+        
+        else if (invrectY == temprectY && (distanceX == 50 || distanceX == -50)){
+                event.target.style.position = 'absolute'
+                event.target.style.backgroundColor = 'pink'
+                event.target.style.left = `${invrect.left}px`;
+                event.target.style.top = `${invrect.top}px`;
+                
+                invbutton.style.position = 'absolute';
+                invbutton.style.left = `${temprect.left}px`;
+                invbutton.style.top = `${temprect.top}px`;
+
+                invrect = temprect
+            }
+
     
 }
+
 
 
 

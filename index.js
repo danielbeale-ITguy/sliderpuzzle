@@ -8,8 +8,18 @@ const buttons = document.getElementsByClassName('button');
 for (let i = 0; i < buttons.length; i++) {
     if (i==8) continue;
     buttons[i].addEventListener('click', changePos);
-    
+    buttons[i].addEventListener('click', do_something);
 }
+
+
+
+
+
+
+
+
+
+
 
 function changePos(event) {
     
@@ -50,14 +60,18 @@ function changePos(event) {
                 invrect = temprect
             }
 
-    
+
+
+
+
 }
 
+let count = 0
 
-
-
-
-
-
+function do_something() {
+    count += 1; 
+    document.getElementById('count').innerHTML = count;
+    
+}
 
 
